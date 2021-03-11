@@ -206,13 +206,13 @@ displayCart();
 
 let booksCart = []
 
-const returnDatA = (booksCart)=>{
+const returnDatA = (data)=>{
   return ` <div class="col">
   <div class="card" style="width: 20rem;">
-<img class="card-img-top" src="${booksCart.img}" alt="Card image cap">
+<img class="card-img-top" src="${data.img}" alt="Card image cap">
 <div class="card-block">
-<h4 class="card-title">${booksCart.title}</h4>
-<p class="card-text">${booksCart.price}</p>
+<h4 class="card-title">${data.title}</h4>
+<p class="card-text">${data.price}</p>
 <a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Add to cart</a>
 </div>
 </div>
@@ -222,8 +222,8 @@ const returnDatA = (booksCart)=>{
 const creatcards =()=>{
   const container = document.querySelector(".insertcard")
   container.innerHTML =""
-  booksCart.forEach((image)=>{
-    container.innerHTML+=returnDatA(image.img); 
+  booksCart.forEach((data)=>{
+    container.innerHTML+=returnDatA(data.img); 
     
   })
 }
